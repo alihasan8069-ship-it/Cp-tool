@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Label Tool — PDF Crop</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="brand"><span>LT</span><div><b>Label Tool</b><small>Personal e-commerce utility</small></div></div><nav><a href="#tools">Tools</a><a href="#workspace">Workspace</a></nav></header>
+<main>
+<section class="hero"><div><em>PERSONAL TOOLKIT</em><h1>Crop labels.<br><strong>Print clean.</strong></h1><p>Upload a PDF, select the label area directly on the page, then export the cropped PDF.</p><a href="#workspace" class="btn">Open Crop Tool ↓</a></div><div class="hero-art"><div class="dots">● ● ●</div><div class="paper"><i></i><u></u><q></q><b>LABEL</b></div></div></section>
+
+<section id="tools" class="section"><em>TOOLS</em><h2>Label Tool</h2><div class="cards">
+<button class="card active"><b>✂</b><h3>PDF Label Crop</h3><p>Select and crop a label from each PDF page.</p></button>
+<div class="card muted"><b>＋</b><h3>PDF Merge</h3><p>Coming next</p></div><div class="card muted"><b>▦</b><h3>QR Sticker</h3><p>Coming next</p></div><div class="card muted"><b>⇅</b><h3>SKU Sorter</h3><p>Coming next</p></div>
+</div></section>
+
+<section id="workspace" class="workspace">
+<div class="head"><div><em>WORKSPACE</em><h2>PDF Label Crop</h2></div><button id="clear" class="ghost">Clear</button></div>
+<div class="upload" id="upload"><input id="file" type="file" accept=".pdf" hidden><div class="up">↑</div><h3>Drop PDF here</h3><p>or select a label PDF from your device</p><button id="choose" class="btn small">Choose PDF</button><div id="info">No file selected</div></div>
+
+<div id="editor" class="hidden">
+<div class="toolbar"><button id="prev" class="ghost">← Prev</button><span id="pageInfo">Page 1 / 1</span><button id="next" class="ghost">Next →</button></div>
+<div class="hint">Drag on the page to select the exact area you want to keep.</div>
+<div class="canvasbox"><canvas id="pdfCanvas"></canvas><canvas id="selectCanvas"></canvas></div>
+<div class="controls">
+<label>Output name<input id="outName" value="label-tool-cropped.pdf"></label>
+<button id="cropAll" class="btn">Crop & Download PDF</button>
+</div>
+<div id="message"></div>
+</div>
+</section>
+</main><footer><b>Label Tool</b><span>Personal use • processing in browser</span></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js" type="module"></script>
+</body></html>
